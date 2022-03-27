@@ -53,6 +53,13 @@ export default function App() {
     <ThemeModeContext.Provider value={themeMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
+        {/* NAVBAR */}
+        {/* HOME */}
+        {/* ABOUT */}
+        {/* SKILLS */}
+        {/* PROJECTS */}
+        {/* CONTACT */}
+        {/* FOOTER */}
       </ThemeProvider>
     </ThemeModeContext.Provider>
   </>);
