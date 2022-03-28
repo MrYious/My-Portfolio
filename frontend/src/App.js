@@ -1,12 +1,15 @@
+import { CssBaseline, Grid } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-import { CssBaseline } from '@mui/material';
+import Home from './components/Home';
+import { MyData } from './MyData';
+import Navbar from './components/Navbar';
 import { ThemeModeContext } from './providers/ThemeModeContext';
 import { useState } from 'react';
 
 export default function App() {
   //State for the current mode [dark or light]
-  const [mode, setMode] = useState('light');
+  const [mode, setMode] = useState('dark');
 
   //Object for the value of the ThemeModeContext
   const themeMode = {
@@ -19,47 +22,52 @@ export default function App() {
   const theme = createTheme({
     palette: {
       mode,
-      ...( mode === 'light'
-      ? {
-        // Light Mode
-        primary: {main: '#00796b',
-        },
-        secondary: {
-          main: 'rgb(220, 0, 78)',
-        },
-        background: {
-          default: '#fff',
-          paper: '#fff',
-        },
-      }
-      : {
-          // Dark Mode
-          primary: {
-            main: '#64ffda',
+    },
+    components: {
+      MuiTypography: {
+        defaultProps: {
+          variantMapping: {
+            h1: 'h2',
+            h2: 'h2',
+            h3: 'h2',
+            h4: 'h2',
+            h5: 'h2',
+            h6: 'h2',
+            subtitle1: 'h2',
+            subtitle2: 'h2',
+            body1: 'span',
+            body2: 'span',
           },
-          secondary: {
-            main: '#311b92',
-          },
-          background: {
-            default: '#212121',
-            paper: '#424242',
-          },
-        }
-      )
-    }
+        },
+      },
+    },
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 480,
+        md: 770,
+        lg: 1025,
+        xl: 1536,
+      },
+    },
   });
+
 
   return (<>
     <ThemeModeContext.Provider value={themeMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
-        {/* NAVBAR */}
-        {/* HOME */}
-        {/* ABOUT */}
-        {/* SKILLS */}
-        {/* PROJECTS */}
-        {/* CONTACT */}
-        {/* FOOTER */}
+        <Grid
+          container
+        >
+          <Navbar />
+          {/* <Home intro={MyData.intro}/> */}
+          {/* ABOUT */}
+          {/* SKILLS */}
+          {/* PROJECTS */}
+          {/* CONTACT */}
+          {/* FOOTER */}
+        </Grid>
       </ThemeProvider>
     </ThemeModeContext.Provider>
   </>);
