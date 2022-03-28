@@ -61,6 +61,7 @@ export default function App() {
           container
         >
           <Navbar />
+          <Home intro={MyData.intro}/>
           {/* <Home intro={MyData.intro}/> */}
           {/* ABOUT */}
           {/* SKILLS */}
