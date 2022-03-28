@@ -1,8 +1,14 @@
 import { Button, Grid } from "@mui/material";
+import { DarkMode, LightMode } from '@mui/icons-material';
 
-import { DarkMode } from '@mui/icons-material';
+import { ThemeModeContext } from "../providers/ThemeModeContext";
+import { useContext } from "react";
+import { useTheme } from "@emotion/react";
 
 const NavLinkGroup = () => {
+
+    const theme = useTheme();
+    const handleToggleTheme = useContext(ThemeModeContext);
 
     return(<>
         <Grid
@@ -26,11 +32,15 @@ const NavLinkGroup = () => {
             md={4}
             justifyContent={'center'}
             alignContent={'center'}
-            sx={{
-                backgroundColor: 'transparent',
-            }}
         >
-            <Button size={'small'} startIcon={<DarkMode/>}>Dark Mode</Button>
+            <Button
+                disableTouchRipple
+                size={'small'}
+                startIcon={theme.palette.mode === 'dark'? <LightMode/> : <DarkMode/>}
+                onClick={handleToggleTheme.toggleThemeMode}
+            >
+                {theme.palette.mode === 'light' ? 'Dark' : 'Light'} Mode
+            </Button>
         </Grid>
     </>)
 }
