@@ -2,7 +2,7 @@ import { CssBaseline, Grid } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import Home from './components/Home';
-import { MyData } from './MyData';
+import { MyData } from './data/MyData';
 import Navbar from './components/Navbar';
 import { ThemeModeContext } from './providers/ThemeModeContext';
 import { useState } from 'react';
@@ -23,24 +23,6 @@ export default function App() {
     palette: {
       mode,
     },
-    components: {
-      MuiTypography: {
-        defaultProps: {
-          variantMapping: {
-            h1: 'h2',
-            h2: 'h2',
-            h3: 'h2',
-            h4: 'h2',
-            h5: 'h2',
-            h6: 'h2',
-            subtitle1: 'h2',
-            subtitle2: 'h2',
-            body1: 'span',
-            body2: 'span',
-          },
-        },
-      },
-    },
     breakpoints: {
       values: {
         xs: 0,
@@ -52,16 +34,19 @@ export default function App() {
     },
   });
 
-
   return (<>
     <ThemeModeContext.Provider value={themeMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
         <Grid
           container
+          className='selector'
+          direction={"column"}
         >
-          <Navbar />
-          <Home intro={MyData.intro}/>
+          <Grid container item xs={12} direction={"column"} sx={{backgroundColor: ""}}>
+            <Navbar />
+            <Home intro={MyData.intro} />
+          </Grid>
           {/* <Home intro={MyData.intro}/> */}
           {/* ABOUT */}
           {/* SKILLS */}

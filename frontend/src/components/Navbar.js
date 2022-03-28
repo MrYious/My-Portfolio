@@ -11,10 +11,9 @@ const Navbar = ( ) => {
             container
             item
             xs={12}
-            minHeight={60}
             alignContent="center"
             sx={{
-                backgroundColor: 'transparent'
+                backgroundColor: ''
             }}
         >
             <Grid
