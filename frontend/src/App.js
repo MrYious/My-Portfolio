@@ -38,16 +38,10 @@ export default function App() {
     <ThemeModeContext.Provider value={themeMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
-        <Grid
-          container
-          className='selector'
-          direction={"column"}
-        >
-          <Grid container item xs={12} direction={"column"} sx={{backgroundColor: ""}}>
-            <Navbar />
-            <Home intro={MyData.intro} />
-          </Grid>
-          {/* <Home intro={MyData.intro}/> */}
+        {/* ROOT */}
+        <Grid container className='selector' direction={"column"}>
+          <Navbar />
+          <Home intro={MyData.intro} />
           {/* ABOUT */}
           {/* SKILLS */}
           {/* PROJECTS */}

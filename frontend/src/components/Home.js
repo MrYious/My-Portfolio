@@ -11,7 +11,7 @@ const Home = ({ intro }) => {
             container
             item
             xs={12}
-            my={11}
+            py={10}
             justifyContent={"center"}
             sx={{
                 backgroundColor: "",
@@ -21,34 +21,34 @@ const Home = ({ intro }) => {
             <Grid
                 container
                 item
-                p={8}
                 xs={"auto"}
-                alignContent={"center"}
+                justifyContent={"center"}
                 direction={"column"}
-                rowSpacing={2}
+                rowSpacing={3}
                 sx={{
                     backgroundColor: "",
+                    zIndex: 1,
                 }}
-                className="selector"
             >
-                <Grid container item sx={12} direction={"column"}>
-                    <Grid item sx={12} >
+                <Grid container item direction={"column"}>
+                    <Grid item >
                         <Typography variant="h4" >
                             Hi, my name is
                         </Typography>
                     </Grid>
-                    <Grid item sx={12}>
+                    <Grid item >
                         <Typography variant="h1" >
                             {intro.name}
                         </Typography>
                     </Grid>
-                    <Grid item sx={12}>
+                    <Grid item>
                         <Typography variant="h4" >
                             I'm an {intro.title}
                         </Typography>
                     </Grid>
                 </Grid>
-                <Grid item sx={12}>
+
+                <Grid item >
                     <Button variant="outlined">
                         <Typography variant="h6" >
                             Download CV
@@ -60,12 +60,12 @@ const Home = ({ intro }) => {
             {/* 2 */}
             <Grid
                 item
-                xs={3}
-                marginLeft={-20}
+                xs={12}
+                md={3}
+                marginLeft={-10}
                 sx={{
                     backgroundColor: "",
                     textAlign: "center",
-                    zIndex: -1,
                 }}
             >
                 <img src={avatar} alt="avatar" className="selector" width={"350"}/>

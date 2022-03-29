@@ -2,7 +2,6 @@ export const MyData = {
     intro: {
         name: "Mark Edison Rosario",
         title: "Aspiring Software Engineer",
-        text: "",
         links: {
             github: "https://github.com/MrYious",
             linkedin: "https://www.facebook.com/MrYious0143/",

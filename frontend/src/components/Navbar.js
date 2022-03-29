@@ -10,7 +10,6 @@ const Navbar = ( ) => {
         <Grid
             container
             item
-            xs={12}
             alignContent="center"
             sx={{
                 backgroundColor: ''
