@@ -1,17 +1,18 @@
 import { Button, Grid, Typography } from "@mui/material";
 
-import avatar from "../assets/avatar.png"
+import banner from "../assets/avatar.png"
+import { useTheme } from '@mui/material/styles';
 
 const Home = ({ intro }) => {
 
+    const theme = useTheme();
     console.log()
 
     return(<>
         <Grid
             container
             item
-            xs={12}
-            py={10}
+            py={12}
             justifyContent={"center"}
             sx={{
                 backgroundColor: "",
@@ -21,7 +22,8 @@ const Home = ({ intro }) => {
             <Grid
                 container
                 item
-                xs={"auto"}
+                xs={12}
+                md={"auto"}
                 justifyContent={"center"}
                 direction={"column"}
                 rowSpacing={3}
@@ -30,7 +32,7 @@ const Home = ({ intro }) => {
                     zIndex: 1,
                 }}
             >
-                <Grid container item direction={"column"}>
+                <Grid container item direction={"column"}  >
                     <Grid item >
                         <Typography variant="h4" >
                             Hi, my name is
@@ -49,7 +51,7 @@ const Home = ({ intro }) => {
                 </Grid>
 
                 <Grid item >
-                    <Button variant="outlined">
+                    <Button variant={theme.palette.mode === "light" ? "contained" : "outlined" }>
                         <Typography variant="h6" >
                             Download CV
                         </Typography>
@@ -68,7 +70,7 @@ const Home = ({ intro }) => {
                     textAlign: "center",
                 }}
             >
-                <img src={avatar} alt="avatar" className="selector" width={"350"}/>
+                <img src={banner} alt="avatar" className="selector" width={"350"}/>
             </Grid>
         </Grid>
     </>)

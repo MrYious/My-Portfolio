@@ -3,7 +3,7 @@ import { DarkMode, LightMode } from '@mui/icons-material';
 
 import { ThemeModeContext } from "../providers/ThemeModeContext";
 import { useContext } from "react";
-import { useTheme } from "@emotion/react";
+import { useTheme } from '@mui/material/styles';
 
 const NavLinkGroup = () => {
 
