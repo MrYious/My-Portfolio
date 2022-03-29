@@ -1,6 +1,7 @@
 import { CssBaseline, Grid } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
+import About from './components/About';
 import Home from './components/Home';
 import { MyData } from './data/MyData';
 import Navbar from './components/Navbar';
@@ -22,6 +23,27 @@ export default function App() {
   const theme = createTheme({
     palette: {
       mode,
+      ...( mode === 'light'
+      ? {
+        // Light Mode
+        primary: {
+          main: '#bf360c',
+        },
+        background: {
+          default: "#c7c7c7",
+          paper: "#b0b0b0",
+        }
+      }
+      : {
+        // Dark Mode
+        primary: {
+          main: '#ff6434',
+        },
+        background: {
+          default: "#121212",
+          paper: "#000000"
+        }
+      })
     },
     breakpoints: {
       values: {
@@ -42,6 +64,7 @@ export default function App() {
         <Grid container className='selector' direction={"column"}>
           <Navbar />
           <Home intro={MyData.intro} />
+          <About about={MyData.about} />
           {/* ABOUT */}
           {/* SKILLS */}
           {/* PROJECTS */}
