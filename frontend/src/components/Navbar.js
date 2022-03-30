@@ -4,31 +4,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import NavLinkGroup from "./NavLinkGroup";
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 
-const Navbar = ( ) => {
+const Navbar = ( { small} ) => {
 
     return(<>
         <Grid
             container
             item
             alignContent="center"
-            sx={{
-                backgroundColor: ''
-            }}
+            py={1}
         >
             <Grid
                 item
-                xs={12}
+                xs={8}
                 md={4}
-                sx={{
-                    textAlign: 'center'
-                }}
+                textAlign={small ? 'start' : 'center'}
+                px={5}
             >
                 <Typography noWrap variant="h4" >
                     <FontAwesomeIcon icon={faUserSecret} size={"xs"}/>
                     <span> MR</span>
                 </Typography>
             </Grid>
-            <NavLinkGroup/>
+            <NavLinkGroup small={small} />
         </Grid>
     </>)
 }

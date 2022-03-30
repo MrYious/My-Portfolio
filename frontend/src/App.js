@@ -1,10 +1,11 @@
-import { CssBaseline, Grid } from '@mui/material';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { CssBaseline, Grid, useMediaQuery } from '@mui/material';
+import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 import About from './components/About';
 import Home from './components/Home';
 import { MyData } from './data/MyData';
 import Navbar from './components/Navbar';
+import Skill from './components/Skill';
 import { ThemeModeContext } from './providers/ThemeModeContext';
 import { useState } from 'react';
 
@@ -12,15 +13,8 @@ export default function App() {
   //State for the current mode [dark or light]
   const [mode, setMode] = useState('dark');
 
-  //Object for the value of the ThemeModeContext
-  const themeMode = {
-    toggleThemeMode: () => {
-      setMode((prev) => prev === 'light'? 'dark': 'light')
-    }
-  };
-
   //Theme for MUI ThemeContext
-  const theme = createTheme({
+  let theme = createTheme({
     palette: {
       mode,
       ...( mode === 'light'
@@ -56,17 +50,27 @@ export default function App() {
     },
   });
 
+  theme = responsiveFontSizes(theme);
+
+  const small = useMediaQuery(theme.breakpoints.down('md'));
+
+  //Object for the value of the ThemeModeContext
+  const themeMode = {
+    toggleThemeMode: () => {
+      setMode((prev) => prev === 'light'? 'dark': 'light')
+    }
+  };
+
   return (<>
     <ThemeModeContext.Provider value={themeMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
         {/* ROOT */}
         <Grid container className='selector' direction={"column"}>
-          <Navbar />
+          <Navbar small={small} />
           <Home intro={MyData.intro} />
           <About about={MyData.about} />
-          {/* ABOUT */}
-          {/* SKILLS */}
+          <Skill skills={MyData.skills}/>
           {/* PROJECTS */}
           {/* CONTACT */}
           {/* FOOTER */}
