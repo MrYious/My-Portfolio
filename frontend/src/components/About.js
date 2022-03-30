@@ -12,8 +12,8 @@ const About = ({ about }) => {
                 textAlign={"center"}
                 py={3}
             >
-                <Typography noWrap variant="h4" >
-                    Who I Am
+                <Typography noWrap variant="h3" fontWeight={500}>
+                    About Me
                 </Typography>
             </Grid>
 

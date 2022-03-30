@@ -22,13 +22,21 @@ const NavLinkGroup = ({ small }) => {
                 <ThemeToggle small={small}/>
                 <NavMenu handleOpenMenu={handleOpenMenu} open={open} small={small}/>
                 {open &&
-                <Grid container item xs={12} minHeight={"100vh"} direction={"column"} justifyContent={"center"} textAlign={"center"} >
-                    <NavLinkItems />
+                <Grid
+                    container item
+                    xs={12} minHeight={"100vh"}
+                    direction={"column"}
+                    justifyContent={"center"} textAlign={"center"}
+                    rowSpacing="10"
+                >
+                    <NavLinkItems small={small}/>
                 </Grid>}
             </>
         :   //Large
             <>
-                <NavLinkItems/>
+                <Grid container item xs={4} justifyContent={"center"} alignContent={"center"}  >
+                    <NavLinkItems />
+                </Grid>
                 <ThemeToggle small={small}/>
             </>
         }
