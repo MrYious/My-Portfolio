@@ -10,7 +10,7 @@ import ReactDOM from 'react-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    Hellos
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

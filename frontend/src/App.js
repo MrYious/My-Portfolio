@@ -5,14 +5,13 @@ import About from './components/About';
 import Home from './components/Home';
 import { MyData } from './data/MyData';
 import Navbar from './components/Navbar';
+import Skill from './components/Skill';
 import { ThemeModeContext } from './providers/ThemeModeContext';
 import { useState } from 'react';
 
 export default function App() {
-  //State for the current mode [dark or light]
   const [mode, setMode] = useState('dark');
 
-  //Theme for MUI ThemeContext
   let theme = createTheme({
     palette: {
       mode,
@@ -50,33 +49,29 @@ export default function App() {
   });
 
   theme = responsiveFontSizes(theme);
-
   const small = useMediaQuery(theme.breakpoints.down('md'));
 
-  //Object for the value of the ThemeModeContext
   const themeMode = {
     toggleThemeMode: () => {
       setMode((prev) => prev === 'light'? 'dark': 'light')
     }
   };
 
-  return <>Hello</>
-
-  // return (<>
-  //   <ThemeModeContext.Provider value={themeMode}>
-  //     <ThemeProvider theme={theme}>
-  //       <CssBaseline/>
-  //       {/* ROOT */}
-  //       <Grid container className='selector' direction={"column"}>
-  //         {/* <Navbar small={small} />
-  //         <Home intro={MyData.intro} />
-  //         <About about={MyData.about} />
-  //         <Skill skills={MyData.skills}/> */}
-  //         {/* PROJECTS */}
-  //         {/* CONTACT */}
-  //         {/* FOOTER */}
-  //       </Grid>
-  //     </ThemeProvider>
-  //   </ThemeModeContext.Provider>
-  // </>);
+  return (<>
+    <ThemeModeContext.Provider value={themeMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline/>
+        {/* ROOT */}
+        <Grid container className='selector' direction={"column"}>
+          <Navbar small={small} />
+          <Home intro={MyData.intro} />
+          <About about={MyData.about} />
+          <Skill skills={MyData.skills}/>
+          {/* PROJECTS */}
+          {/* CONTACT */}
+          {/* FOOTER */}
+        </Grid>
+      </ThemeProvider>
+    </ThemeModeContext.Provider>
+  </>);
 }
