@@ -12,8 +12,10 @@ const Home = ({ intro }) => {
         <Grid
             container
             item
-            py={small ? 0 : 10}
+            mt={5}
+            py={small ? 0 : 12}
             justifyContent={"center"}
+            zIndex={-1}
         >
             {/* 1 */}
             <Grid

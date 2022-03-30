@@ -16,7 +16,18 @@ export const MyData = {
     },
     skills: {
         list: [
-            { name: "", icon: "", category: ""},
+            { name: "HTML",         icon: "icomoon-free:html-five",     category: "Frontend"},
+            { name: "CSS",          icon: "simple-icons:css3",          category: "Frontend"},
+            { name: "Javascript",   icon: "fa6-brands:js",              category: "Frontend"},
+            { name: "ReactJS",      icon: "ri:reactjs-fill",            category: "Frontend"},
+            { name: "Redux",        icon: "akar-icons:redux-fill",      category: "Frontend"},
+
+            { name: "NodeJS",       icon: "fa-brands:node-js",          category: "Backend"},
+            { name: "Java",         icon: "simple-icons:java",          category: "Backend"},
+            { name: "Python",       icon: "fa6-brands:python",          category: "Backend"},
+
+            { name: "Git",          icon: "cib:git",                    category: "Tools"},
+            { name: "GitHub",       icon: "akar-icons:github-fill",     category: "Tools"},
         ],
         note: "My primary stack is MERN. My university's course curriculum made and required us to learn various languages which sometimes doesn't align with our chosen careers. Nevertheless, I've included them to showcase my flexibility and willingness to learn if demand.  "
     },
