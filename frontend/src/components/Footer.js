@@ -1,18 +1,14 @@
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 
 const Footer = () => {
 
     return <>
-        <Grid container item py={6} direction={"column"} backgroundColor="background.paper">
-            <Grid
-                container
-                item
-                justifyContent={"center"}
-                direction={"column"}
-                py={3}
-            >
-                <Grid container item xs={10} md={5} justifyContent="center" p={4} alignContent={"center"} backgroundColor={""}>
-                </Grid>
+        <Grid container item py={3} backgroundColor="background.paper" justifyContent={"center"}>
+            {/* Content */}
+            <Grid item xs={"auto"} p={2} bgcolor="">
+                <Typography fontWeight={300} fontSize={15}>
+                    {"Copyright © 2022 | Made with ❤️ by Mark Edison Rosario"}
+                </Typography>
             </Grid>
         </Grid>
     </>
