@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import banner from "../assets/avatar.png"
 import { useTheme } from '@mui/material/styles';
 
-const Home = ({ intro, small }) => {
+const Home = ({ intro, small, navData }) => {
 
     const theme = useTheme();
 
@@ -17,7 +17,7 @@ const Home = ({ intro, small }) => {
             direction={"column"}
             py={small ? 10 : 12}
         >
-            <Navbar small={small} />
+            <Navbar small={small} navData={navData}/>
             <Grid container item justifyContent={"center"} alignContent="center">
                 {/* 1 */}
                 <Grid

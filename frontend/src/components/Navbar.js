@@ -3,7 +3,7 @@ import { Grid, Typography } from "@mui/material";
 import { Icon } from '@iconify/react';
 import NavLinkGroup from "./NavLinkGroup";
 
-const Navbar = ({ small }) => {
+const Navbar = ({ small, navData }) => {
 
     return(<>
         <Grid
@@ -18,7 +18,7 @@ const Navbar = ({ small }) => {
             {/* 1 */}
             <Grid
                 item
-                xs={8} md={4}
+                xs={8} md={3}
                 alignContent={"center"}
                 textAlign={small ? 'start' : 'center'}
                 px={5}
@@ -29,7 +29,7 @@ const Navbar = ({ small }) => {
                 </Typography>
             </Grid>
             {/* 2-3 */}
-            <NavLinkGroup small={small} />
+            <NavLinkGroup small={small} navData={navData}/>
         </Grid>
     </>)
 }

@@ -5,7 +5,7 @@ import NavLinkItems from "./NavLinkItems";
 import NavMenu from "./NavMenu";
 import ThemeToggle from "./ThemeToggle";
 
-const NavLinkGroup = ({ small }) => {
+const NavLinkGroup = ({ small, navData }) => {
 
     const [open, setOpen] = useState(false);
 
@@ -29,13 +29,13 @@ const NavLinkGroup = ({ small }) => {
                     justifyContent={"center"} textAlign={"center"}
                     rowSpacing="10"
                 >
-                    <NavLinkItems small={small}/>
+                    <NavLinkItems small={small} navData={navData}/>
                 </Grid>}
             </>
         :   //Large
             <>
-                <Grid container item xs={4} justifyContent={"center"} alignContent={"center"}  >
-                    <NavLinkItems />
+                <Grid container item xs={4} md={6} justifyContent={"center"} alignContent={"center"}  >
+                    <NavLinkItems small={small} navData={navData}/>
                 </Grid>
                 <ThemeToggle small={small}/>
             </>

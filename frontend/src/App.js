@@ -65,7 +65,7 @@ export default function App() {
         <CssBaseline/>
         {/* ROOT */}
         <Grid container className='selector' direction={"column"}>
-          <Home intro={MyData.intro} small={small}/>
+          <Home intro={MyData.intro} small={small} navData={MyData.navLinks}/>
           <About about={MyData.about} />
           <Skill skills={MyData.skills}/>
           <Projects />
