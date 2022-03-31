@@ -1,4 +1,11 @@
 export const MyData = {
+    navLinks: [
+        {to: "Home", name: "HOME"},
+        {to: "About", name: "ABOUT"},
+        {to: "Skill", name: "SKILL"},
+        {to: "Project", name: "PROJECT"},
+        {to: "Contact", name: "CONTACT"},
+    ],
     intro: {
         name:   "Mark Edison Rosario",
         title:  "Aspiring Software Engineer",
