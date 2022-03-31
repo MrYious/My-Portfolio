@@ -36,7 +36,7 @@ export const MyData = {
             { name: "Git",          icon: "cib:git",                    category: "Tools"},
             { name: "GitHub",       icon: "akar-icons:github-fill",     category: "Tools"},
         ],
-        note: "My primary stack is MERN. My university's course curriculum made and required us to learn various languages which sometimes doesn't align with our chosen careers. Nevertheless, I've included them to showcase my flexibility and willingness to learn if demand.  "
+        note: "I've been self-studying MERN stack for almost a year as this is the career that I am determined to pursue. Our university's course curriculum required us to learn various languages and technologies and I've included them to showcase my flexibility and willingness to learn if demanded. "
     },
     projects: {
 
