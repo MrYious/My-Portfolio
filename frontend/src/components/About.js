@@ -7,6 +7,7 @@ const About = ({ about }) => {
 
     return <>
         <Grid container item py={6} direction={"column"} backgroundColor={"background.paper"} id="About">
+            {/* Title */}
             <Grid
                 item
                 textAlign={"center"}
@@ -16,18 +17,19 @@ const About = ({ about }) => {
                     About Me
                 </Typography>
             </Grid>
-
+            {/* Content */}
             <Grid
                 container
                 item
                 justifyContent={"center"}
             >
+                {/* Element 1 */}
                 <Grid container item xs={10} md={5} justifyContent="center" p={4} alignContent={"center"} >
                     <Box p={2} backgroundColor={""} >
                         <img src={profile} alt="avatar" className="selector" width={"350"}/>
                     </Box>
                 </Grid>
-
+                {/* Element 2 */}
                 <Grid container item xs={10} md={5} justifyContent="center" p={4} direction="column" backgroundColor={""}>
                     <Grid item >
                         <Typography py={1} variant="h6" fontWeight={300}>
