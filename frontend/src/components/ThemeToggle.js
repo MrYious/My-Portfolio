@@ -14,7 +14,7 @@ const ThemeToggle = ({ small }) => {
         <Grid
             container
             item
-            xs={2}  md={4}
+            xs={2}  md={3}
             justifyContent={'center'}
             alignContent={'center'}
         >
