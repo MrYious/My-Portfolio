@@ -3,11 +3,6 @@ import { Grid, Tab, Tabs, Typography } from "@mui/material";
 import { Icon } from '@iconify/react';
 import { useState } from "react";
 
-//TODO:
-//React-scroll
-//Tab
-
-
 const Skill = ({ skills }) => {
 
     const [filter, setFilter] = useState("All");
@@ -17,7 +12,7 @@ const Skill = ({ skills }) => {
     }
 
     return <>
-        <Grid container item py={5} direction={"column"} id="Skill">
+        <Grid container item py={6} direction={"column"} id="Skill">
             <Grid
                 item
                 textAlign={"center"}
@@ -27,9 +22,10 @@ const Skill = ({ skills }) => {
                     My Skills
                 </Typography>
             </Grid>
-            <Grid container item xs={12} md={5} justifyContent="center" p={2} alignContent={"center"} backgroundColor={""}>
-                <Tabs value={filter} onChange={handleFilterChange} centered >
-                    <Tab label="All" value={"All"}/>
+
+            <Grid container item xs={12} md={5} justifyContent="center" p={2} alignContent={"center"}>
+                <Tabs value={filter} onChange={handleFilterChange} centered>
+                    <Tab label="All" value={"All"} />
                     <Tab label="Frontend" value={"Frontend"}/>
                     <Tab label="Backend" value={"Backend"}/>
                     <Tab label="Tools" value={"Tools"}/>

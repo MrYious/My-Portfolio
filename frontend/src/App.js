@@ -2,8 +2,11 @@ import { CssBaseline, Grid, useMediaQuery } from '@mui/material';
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 import About from './components/About';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 import Home from './components/Home';
 import { MyData } from './data/MyData';
+import Projects from './components/Project';
 import Skill from './components/Skill';
 import { ThemeModeContext } from './providers/ThemeModeContext';
 import { useState } from 'react';
@@ -65,9 +68,9 @@ export default function App() {
           <Home intro={MyData.intro} small={small}/>
           <About about={MyData.about} />
           <Skill skills={MyData.skills}/>
-          {/* PROJECTS */}
-          {/* CONTACT */}
-          {/* FOOTER */}
+          <Projects />
+          <Contact />
+          <Footer />
         </Grid>
       </ThemeProvider>
     </ThemeModeContext.Provider>
