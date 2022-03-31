@@ -11,7 +11,9 @@ const Navbar = ({ small }) => {
             item
             justifyContent={"center"}
             alignContent="center"
-            py={1}
+            position="fixed"
+            top={0}
+            bgcolor="background.paper"
         >
             {/* 1 */}
             <Grid

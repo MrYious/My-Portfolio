@@ -17,7 +17,7 @@ const Skill = ({ skills }) => {
     }
 
     return <>
-        <Grid container item py={5} direction={"column"} >
+        <Grid container item py={5} direction={"column"} id="Skill">
             <Grid
                 item
                 textAlign={"center"}

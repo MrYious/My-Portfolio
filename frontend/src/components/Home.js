@@ -1,68 +1,72 @@
-import { Button, Grid, Typography, useMediaQuery } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 
+import Navbar from './Navbar';
 import banner from "../assets/avatar.png"
 import { useTheme } from '@mui/material/styles';
 
-const Home = ({ intro }) => {
+const Home = ({ intro, small }) => {
 
     const theme = useTheme();
-    const small = useMediaQuery(theme.breakpoints.down('md'));
 
     return(<>
         <Grid
             container
             item
-            py={small ? 0 : 10}
             justifyContent={"center"}
+            id="Home"
+            direction={"column"}
+            py={small ? 10 : 12}
         >
-            {/* 1 */}
-            <Grid
-                container
-                item
-                xs={"auto"}
-                my={2}
-                justifyContent={"center"}
-                direction={"column"}
-                rowSpacing={3}
-                zIndex={1}
-            >
-                <Grid container item direction={"column"} textAlign={small ? "center" : "left"} >
-                    <Grid item >
-                        <Typography variant={small ? "h5" : "h4"} >
-                            Hi, my name is
-                        </Typography>
+            <Navbar small={small} />
+            <Grid container item justifyContent={"center"} alignContent="center">
+                {/* 1 */}
+                <Grid
+                    container
+                    item
+                    xs={"auto"}
+                    my={2}
+                    justifyContent={"center"}
+                    direction={"column"}
+                    rowSpacing={3}
+                    zIndex={1}
+                >
+                    <Grid container item direction={"column"} textAlign={small ? "center" : "left"} >
+                        <Grid item >
+                            <Typography variant={small ? "h5" : "h4"} >
+                                Hi, my name is
+                            </Typography>
+                        </Grid>
+                        <Grid item >
+                            <Typography variant={small ? "h2" : "h1"} >
+                                {intro.name}
+                            </Typography>
+                        </Grid>
+                        <Grid item >
+                            <Typography variant={small ? "h5" : "h4"} >
+                                I'm an {intro.title}
+                            </Typography>
+                        </Grid>
                     </Grid>
-                    <Grid item >
-                        <Typography variant={small ? "h2" : "h1"} >
-                            {intro.name}
-                        </Typography>
-                    </Grid>
-                    <Grid item >
-                        <Typography variant={small ? "h5" : "h4"} >
-                            I'm an {intro.title}
-                        </Typography>
+
+                    <Grid item textAlign={small ? "center" : "left"} >
+                        <Button variant={theme.palette.mode === "light" ? "contained" : "outlined" }>
+                            <Typography variant="h6" >
+                                Download CV
+                            </Typography>
+                        </Button>
                     </Grid>
                 </Grid>
 
-                <Grid item textAlign={small ? "center" : "left"} >
-                    <Button variant={theme.palette.mode === "light" ? "contained" : "outlined" }>
-                        <Typography variant="h6" >
-                            Download CV
-                        </Typography>
-                    </Button>
+                {/* 2 */}
+                <Grid
+                    item
+                    xs={12} md={3}
+                    my={2}
+                    marginLeft={small ? 0 : -10}
+                    textAlign={"center"}
+                >
+                    <img src={banner} alt="avatar" className="selector" width={"350"} />
                 </Grid>
-            </Grid>
-
-            {/* 2 */}
-            <Grid
-                item
-                xs={12}
-                md={3}
-                my={2}
-                marginLeft={small ? 0 : -10}
-                textAlign={"center"}
-            >
-                <img src={banner} alt="avatar" className="selector" width={"350"}/>
             </Grid>
         </Grid>
     </>)
