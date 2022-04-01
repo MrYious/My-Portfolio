@@ -43,12 +43,12 @@ export const MyData = {
     },
     contact: {
         email:      "rosariomark37@gmail.com",
-        address:    "San Pedro, Laguna",
-        phone:      "(+63) 9322831860",
+        address:    "City of San Pedro, Laguna",
+        phone:      "(+63) 932 283 1860",
         socials: {
             github:     "https://github.com/MrYious",
-            linkedin:   "https://www.facebook.com/MrYious0143/",
-            facebook:   "https://www.linkedin.com/in/rosario-mark/",
+            facebook:   "https://www.facebook.com/MrYious0143/",
+            linkedin:   "https://www.linkedin.com/in/rosario-mark/",
             instagram:  "https://www.instagram.com/m_rked/",
             reddit:     "https://www.reddit.com/user/MrYious43",
         }
