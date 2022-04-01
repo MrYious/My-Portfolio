@@ -69,7 +69,7 @@ export default function App() {
           <About about={MyData.about} />
           <Skill skills={MyData.skills}/>
           <Projects />
-          <Contact />
+          <Contact small={small} contact={MyData.contact}/>
           <Footer />
         </Grid>
       </ThemeProvider>
