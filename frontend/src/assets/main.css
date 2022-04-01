@@ -27,6 +27,10 @@ body::-webkit-scrollbar-thumb {
     outline: 1px solid slategrey;
 }
 
-.active {
+.activeD {
+    color: #ff6434;
+}
+
+.activeL {
     color: #bf360c;
 }
