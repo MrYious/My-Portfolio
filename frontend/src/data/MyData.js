@@ -49,6 +49,8 @@ export const MyData = {
             github:     "https://github.com/MrYious",
             linkedin:   "https://www.facebook.com/MrYious0143/",
             facebook:   "https://www.linkedin.com/in/rosario-mark/",
+            instagram:  "https://www.instagram.com/m_rked/",
+            reddit:     "https://www.reddit.com/user/MrYious43",
         }
     },
     footer: {
