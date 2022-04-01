@@ -36,10 +36,20 @@ export const MyData = {
             { name: "Git",          icon: "cib:git",                    category: "Tools"},
             { name: "GitHub",       icon: "akar-icons:github-fill",     category: "Tools"},
         ],
-        note: "I've been self-studying MERN stack for almost a year as this is the career that I am determined to pursue. Our university's course curriculum required us to learn various languages and technologies and I've included them to showcase my flexibility and willingness to learn if demanded. "
+        note:   "I've been self-studying MERN stack for almost a year as this is the career that I am determined to pursue. Our university's course curriculum required us to learn various languages and technologies and I've included them to showcase my flexibility and willingness to learn if demanded. "
     },
     projects: {
 
+    },
+    contact: {
+        email:      "rosariomark37@gmail.com",
+        address:    "San Pedro, Laguna",
+        phone:      "(+63) 9322831860",
+        socials: {
+            github:     "https://github.com/MrYious",
+            linkedin:   "https://www.facebook.com/MrYious0143/",
+            facebook:   "https://www.linkedin.com/in/rosario-mark/",
+        }
     },
     footer: {
 
