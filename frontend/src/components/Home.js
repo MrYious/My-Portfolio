@@ -1,4 +1,5 @@
 import { Button, Grid, Typography } from "@mui/material";
+import CV from ".../"
 
 import Navbar from './Navbar';
 import banner from "../assets/avatar.png"
@@ -49,11 +50,14 @@ const Home = ({ intro, small, navData }) => {
                     </Grid>
 
                     <Grid item textAlign={small ? "center" : "left"} >
-                        <Button variant={theme.palette.mode === "light" ? "contained" : "outlined" }>
-                            <Typography variant="h6" >
-                                Download CV
-                            </Typography>
-                        </Button>
+                        <a href="require("../")" >
+                            <Button variant={theme.palette.mode === "light" ? "contained" : "outlined" }>
+                                <Typography variant="h6" >
+                                    Download CV
+                                </Typography>
+                            </Button>
+                        </a>
+                        
                     </Grid>
                 </Grid>
 
