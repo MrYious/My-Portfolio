@@ -14,6 +14,7 @@ const Navbar = ({ small, navData }) => {
             position="fixed"
             top={0}
             bgcolor="background.paper"
+            zIndex={2}
         >
             {/* 1 */}
             <Grid

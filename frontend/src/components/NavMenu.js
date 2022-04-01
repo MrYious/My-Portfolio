@@ -2,7 +2,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { Grid } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 
-const NavMenu = ({ small, handleOpenMenu, open }) => {
+const NavMenu = ({ handleOpenMenu, open }) => {
 
     return(<Grid
         container
