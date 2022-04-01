@@ -27,33 +27,33 @@ const Contact = ({ small, contact }) => {
                 </Typography>
             </Grid>
             {/* Content */}
-            <Grid container item justifyContent={"center"} py={2} gap={5}>
+            <Grid container item justifyContent={"center"} direction={small ? "row" : "row-reverse"} py={2} gap={5}>
                 {/* Group 1 */}
-                <Grid container item xs={12} md={5} justifyContent={"center"} alignContent={"start"} backgroundColor={""}>
+                <Grid container item xs={12} md={5} justifyContent={"center"} alignContent={"start"} >
                     {/* Section 1 */}
-                    <Grid item xs={10} py={2} fontSize={25} fontWeight={300}>
-                        Get in touch
+                    <Grid item xs={10} py={2} >
+                        <Typography variant="h5" fontWeight={300}>Get in touch</Typography>
                     </Grid>
-                    <Grid container item xs={10} px={4} gap={1}>
+                    <Grid container item xs={10} gap={1}>
                         <Grid container item xs={10} alignContent={"center"} gap={1.5} >
                             <HomeIcon fontSize={"large"} color="primary"/>
-                            <Typography fontSize={20} fontWeight={300}>{contact.address}</Typography>
+                            <Typography variant="subtitle1" fontWeight={300}>{contact.address}</Typography>
                         </Grid>
                         <Grid container item xs={10} alignContent={"center"} gap={1.5} >
                             <LocalPhoneIcon fontSize={"large"} color="primary"/>
-                            <Typography fontSize={20} fontWeight={300}>{contact.phone}</Typography>
+                            <Typography variant="subtitle1" fontWeight={300}>{contact.phone}</Typography>
                         </Grid>
                         <Grid container item  xs={10} alignContent={"center"} gap={1.5} >
                             <EmailIcon fontSize={"large"} color="primary"/>
-                            <Typography fontSize={20} fontWeight={300}>{contact.email}</Typography>
+                            <Typography variant="subtitle1" fontWeight={300}>{contact.email}</Typography>
                         </Grid>
                     </Grid>
 
                     {/* Section 2 */}
-                    <Grid item xs={10} py={2} fontSize={25} fontWeight={300}>
-                        Check out my socials
+                    <Grid item xs={10} pt={3} pb={2}>
+                        <Typography variant="h5" fontWeight={300}>Check out my socials</Typography>
                     </Grid>
-                    <Grid item xs={10} px={3}>
+                    <Grid item xs={10}>
                         <IconButton onClick={() => handleOpenLink(contact.socials.linkedin)}><LinkedInIcon fontSize="large"/></IconButton>
                         <IconButton onClick={() => handleOpenLink(contact.socials.github)}><GitHubIcon fontSize="large"/></IconButton>
                         <IconButton onClick={() => handleOpenLink(contact.socials.facebook)}><FacebookIcon fontSize="large"/></IconButton>
@@ -62,7 +62,7 @@ const Contact = ({ small, contact }) => {
                     </Grid>
                 </Grid>
                 {/* Group 2 */}
-                <Grid container item xs={12} md={5} p={0} gap={2} justifyContent={"center"} backgroundColor={""}>
+                <Grid container item xs={12} md={5} gap={2} justifyContent={"center"}>
                     {/* Elements */}
                     <Grid item xs={10}>
                         <TextField id="filled-basic" label="Name" variant="filled" required fullWidth/>

@@ -20,8 +20,8 @@ const Skill = ({ skills }) => {
                 </Typography>
             </Grid>
             {/* Tab */}
-            <Grid container item justifyContent="center" p={2} alignContent={"center"}>
-                <Tabs value={filter} onChange={handleFilterChange} centered>
+            <Grid container item justifyContent="center" py={2} alignContent={"center"} >
+                <Tabs value={filter} onChange={handleFilterChange}>
                     <Tab label="All" value={"All"} />
                     <Tab label="Frontend" value={"Frontend"}/>
                     <Tab label="Backend" value={"Backend"}/>
