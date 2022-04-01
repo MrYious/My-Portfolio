@@ -1,9 +1,12 @@
 import { Grid, Typography } from "@mui/material";
 
-import { Box } from "@mui/system";
-import profile from "../assets/profile.jpg"
+import Profile from "../assets/profile.jpg"
+import ReactRoundedImage from "react-rounded-image";
+import { useTheme } from "@emotion/react";
 
 const About = ({ about }) => {
+
+    const theme = useTheme();
 
     return <>
         <Grid container item py={7} direction={"column"} backgroundColor={"background.paper"} id="About">
@@ -26,9 +29,7 @@ const About = ({ about }) => {
             >
                 {/* Element 1 */}
                 <Grid container item xs={10} md={5} justifyContent="center" p={4} alignContent={"center"} >
-                    <Box p={2} >
-                        <img src={profile} alt="avatar" className="selector" width={"350"}/>
-                    </Box>
+                    <ReactRoundedImage image={Profile} imageWidth="400" imageHeight="400" roundedSize="5" roundedColor={theme.palette.mode ==="light" ? "#bf360c" : "#ff6434"}/>
                 </Grid>
                 {/* Element 2 */}
                 <Grid container item xs={10} md={5} justifyContent="center" p={4} direction="column">
