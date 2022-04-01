@@ -9,8 +9,8 @@ const NavLinkItems = ({small, navData}) => {
     const margin = small ? 1 : 0;
 
     return(<>
-        {navData.map( (link) => {
-        return <Grid item my={margin} key={link.id} fontSize={size} fontWeight={300}>
+        {navData.map( (link, i) => {
+        return <Grid item my={margin} key={i} fontSize={size} fontWeight={300}>
                 <Link
                     activeClass={theme.palette.mode === "light" ? "activeL" : "activeD"}
                     to={link.to}

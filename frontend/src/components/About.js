@@ -1,6 +1,5 @@
 import { Grid, Typography } from "@mui/material";
 
-import Profile from "../assets/profile.jpg"
 import ReactRoundedImage from "react-rounded-image";
 import { useTheme } from "@emotion/react";
 
@@ -29,7 +28,7 @@ const About = ({ about }) => {
             >
                 {/* Element 1 */}
                 <Grid container item xs={10} md={5} justifyContent="center" p={4} alignContent={"center"} >
-                    <ReactRoundedImage image={Profile} imageWidth="400" imageHeight="400" roundedSize="5" roundedColor={theme.palette.mode ==="light" ? "#bf360c" : "#ff6434"}/>
+                    <ReactRoundedImage image={about.image} imageWidth="400" imageHeight="400" roundedSize="5" roundedColor={theme.palette.mode ==="light" ? "black" : "#ff6434"}/>
                 </Grid>
                 {/* Element 2 */}
                 <Grid container item xs={10} md={5} justifyContent="center" p={4} direction="column">

@@ -35,7 +35,7 @@ const Skill = ({ skills }) => {
                 justifyContent={"center"}
                 py={4}
             >
-                <Grid container item xs={12} md={8} p={2} justifyContent="center" gap={2} bgcolor="">
+                <Grid container item xs={12} md={8} p={2} justifyContent="center" gap={2} >
                     {skills.list
                         .filter( skill => filter === "All" ? true : skill.category === filter)
                         .map( (skill, i) =>
