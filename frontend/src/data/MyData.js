@@ -1,3 +1,6 @@
+import Profile from "../assets/profile.jpg"
+import ProjectIMG from "../assets/project1_placeholder.png"
+
 export const MyData = {
     navLinks: [
         {to: "Home", name: "HOME"},
@@ -19,7 +22,7 @@ export const MyData = {
         header: "My name's Mark. I'm an aspiring software engineer and I'm actively looking for opportunities to kickstart my career.",
         body:   "I'm an upcoming 4th year Computer Science student at the Polytechnic University of the Philippines-Sta Mesa. Currently an average developer with strong desire to create solutions for real-life problems. I spent my leisure hours reading articles and light novels. ",
         footer: "I love to learn and explore. Always striving to learn new technologies that can further enhance my skills as a developer. Right now, I'm exploring how backend technologies work especially cloud services.",
-        image:  "",
+        image:  Profile,
     },
     skills: {
         list: [
@@ -38,9 +41,11 @@ export const MyData = {
         ],
         note:   "I've been self-studying MERN stack for almost a year as this is the career that I am determined to pursue. Our university's course curriculum required us to learn various languages and technologies and I've included them to showcase my flexibility and willingness to learn if demanded. "
     },
-    projects: {
-
-    },
+    projects: [
+        {title: "Sample Title", image: ProjectIMG, description: "Sample description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum voluptatem ducimus ratione debitis esse incidunt atque aliquid, minus ullam fugit?" },
+        {title: "Sample Title", image: ProjectIMG, description: "Sample description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum voluptatem ducimus ratione debitis esse incidunt atque aliquid, minus ullam fugit?" },
+        {title: "Sample Title", image: ProjectIMG, description: "Sample description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum voluptatem ducimus ratione debitis esse incidunt atque aliquid, minus ullam fugit?" },
+    ],
     contact: {
         email:      "rosariomark37@gmail.com",
         address:    "City of San Pedro, Laguna",
@@ -52,8 +57,5 @@ export const MyData = {
             instagram:  "https://www.instagram.com/m_rked/",
             reddit:     "https://www.reddit.com/user/MrYious43",
         }
-    },
-    footer: {
-
-    },
+    }
 }
