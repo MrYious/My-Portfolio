@@ -1,9 +1,12 @@
 import { Grid, Typography } from "@mui/material";
 
-const Projects = () => {
+import ProjectItem from "./ProjectItem";
+
+const Projects = ({ projects }) => {
 
     return <>
         <Grid container item py={7} direction={"column"} id="Project" backgroundColor="background.paper">
+            {/* Title */}
             <Grid
                 item
                 textAlign={"center"}
@@ -13,15 +16,16 @@ const Projects = () => {
                     My Projects
                 </Typography>
             </Grid>
-
+            {/* Content */}
             <Grid
-                container
-                item
+                container item
+                p={4}
                 justifyContent={"center"}
-                direction={"column"}
-                py={2}
             >
-                <Grid container item xs={10} md={5} justifyContent="center" p={4} alignContent={"center"} backgroundColor={""}>
+                <Grid container item xs={12} justifyContent="center" gap={3} alignContent={"center"}>
+                    {projects.map( (project, i) =>
+                        <ProjectItem project={project} key={i}/>
+                    )}
                 </Grid>
             </Grid>
         </Grid>

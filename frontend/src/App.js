@@ -68,7 +68,7 @@ export default function App() {
           <Home intro={MyData.intro} small={small} navData={MyData.navLinks}/>
           <About about={MyData.about} />
           <Skill skills={MyData.skills}/>
-          <Projects />
+          <Projects projects={MyData.projects}/>
           <Contact small={small} contact={MyData.contact}/>
           <Footer />
         </Grid>
