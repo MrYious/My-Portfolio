@@ -19,7 +19,7 @@ const Contact = ({ small, contact }) => {
     }
 
     return <>
-        <Grid container item py={6} direction={"column"} id="Contact" >
+        <Grid container item py={7} direction={"column"} id="Contact" >
             {/* Title */}
             <Grid item textAlign={"center"} py={3}  >
                 <Typography noWrap variant="h3" fontWeight={500} >

@@ -12,7 +12,7 @@ const Skill = ({ skills }) => {
     }
 
     return <>
-        <Grid container item py={6} direction={"column"} id="Skill">
+        <Grid container item py={7} direction={"column"} id="Skill">
             {/* Title */}
             <Grid item textAlign={"center"} py={2} >
                 <Typography noWrap variant="h3" fontWeight={500} >

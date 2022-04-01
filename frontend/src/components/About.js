@@ -6,7 +6,7 @@ import profile from "../assets/profile_placeholder.jpg"
 const About = ({ about }) => {
 
     return <>
-        <Grid container item py={6} direction={"column"} backgroundColor={"background.paper"} id="About">
+        <Grid container item py={7} direction={"column"} backgroundColor={"background.paper"} id="About">
             {/* Title */}
             <Grid
                 item
@@ -22,6 +22,7 @@ const About = ({ about }) => {
                 container
                 item
                 justifyContent={"center"}
+                py={2}
             >
                 {/* Element 1 */}
                 <Grid container item xs={10} md={5} justifyContent="center" p={4} alignContent={"center"} >
@@ -32,17 +33,17 @@ const About = ({ about }) => {
                 {/* Element 2 */}
                 <Grid container item xs={10} md={5} justifyContent="center" p={4} direction="column" backgroundColor={""}>
                     <Grid item >
-                        <Typography py={1} variant="h6" fontWeight={300}>
+                        <Typography py={1} fontSize={"1.15rem"} fontWeight={300}>
                             {about.header}
                         </Typography>
                     </Grid>
                     <Grid item >
-                        <Typography py={1} variant="h6" fontWeight={300}>
+                        <Typography py={1} fontSize={"1.15rem"} fontWeight={300}>
                             {about.body}
                         </Typography>
                     </Grid>
                     <Grid item >
-                        <Typography py={1} variant="h6" fontWeight={300}>
+                        <Typography py={1} fontSize={"1.15rem"} fontWeight={300}>
                             {about.footer}
                         </Typography>
                     </Grid>
