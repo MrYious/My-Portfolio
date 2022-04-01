@@ -66,7 +66,7 @@ export default function App() {
         {/* ROOT */}
         <Grid container className='selector' direction={"column"}>
           <Home intro={MyData.intro} small={small} navData={MyData.navLinks}/>
-          <About about={MyData.about} />
+          <About about={MyData.about} small={small} />
           <Skill skills={MyData.skills}/>
           <Projects projects={MyData.projects}/>
           <Contact small={small} contact={MyData.contact}/>
