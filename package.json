@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://markrosario.me",
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "@fontsource/roboto": "^4.5.5",
