@@ -9,13 +9,33 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import RedditIcon from '@mui/icons-material/Reddit';
 import SendIcon from '@mui/icons-material/Send';
+import emailjs from '@emailjs/browser';
+import { useState } from "react";
 
 const Contact = ({ small, contact }) => {
 
     const theme = useTheme();
 
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+
     const handleOpenLink = (link) =>{
         window.open(link, "_blank");
+    }
+
+    const sendEmail = () => {
+        emailjs.sendForm('service_8rzn3gq', 'template_v4evfpf', "#form", '3JYth6CoGFxyfIIYU')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
     }
 
     return <>
@@ -62,25 +82,29 @@ const Contact = ({ small, contact }) => {
                     </Grid>
                 </Grid>
                 {/* Group 2 */}
-                <Grid container item xs={12} md={5} gap={2} justifyContent={"center"}>
-                    {/* Elements */}
-                    <Grid item xs={10}>
-                        <TextField id="filled-basic" label="Name" variant="filled" required fullWidth/>
-                    </Grid>
-                    <Grid item xs={10}>
-                        <TextField id="filled-basic" label="Email" variant="filled" required fullWidth/>
-                    </Grid>
-                    <Grid item xs={10}>
-                        <TextField id="filled-basic" label="Subject" variant="filled" fullWidth/>
-                    </Grid>
-                    <Grid item xs={10}>
-                        <TextField id="filled-basic" label="Message" variant="filled" required multiline rows={6} fullWidth/>
-                    </Grid>
-                    <Grid item xs={10}>
-                        <Button variant={theme.palette.mode === 'light' ? "contained" : "outlined"} endIcon={<SendIcon />} size={"large"}>
-                            Send
-                        </Button>
-                    </Grid>
+                <Grid container item xs={12} md={5} >
+                    <form id="form">
+                        <Grid container gap={2} justifyContent={"center"}>
+                            {/* Elements */}
+                            <Grid item xs={10}>
+                                <TextField id="filled-basic" label="Name" name="name" value={name} onChange={(e) => setName(e.target.value)} variant="filled" required fullWidth/>
+                            </Grid>
+                            <Grid item xs={10}>
+                                <TextField id="filled-basic" label="Email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} variant="filled" required fullWidth/>
+                            </Grid>
+                            <Grid item xs={10}>
+                                <TextField id="filled-basic" label="Subject" name="subject" value={subject} onChange={(e) => setSubject(e.target.value)} variant="filled" fullWidth/>
+                            </Grid>
+                            <Grid item xs={10}>
+                                <TextField id="filled-basic" label="Message" name="message" value={message} onChange={(e) => setMessage(e.target.value)} variant="filled" required multiline rows={6} fullWidth/>
+                            </Grid>
+                            <Grid item xs={10}>
+                                <Button variant={theme.palette.mode === 'light' ? "contained" : "outlined"} endIcon={<SendIcon />} size={"large"} onClick={sendEmail}>
+                                    Send
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </form>
                 </Grid>
             </Grid>
         </Grid>
