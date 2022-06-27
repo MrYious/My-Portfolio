@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.2ea734e8.css",
-    "main.js": "/static/js/main.bbb8aa67.js",
+    "main.css": "/static/css/main.2259e22b.css",
+    "main.js": "/static/js/main.b61298b6.js",
+    "static/media/TRP.png": "/static/media/TRP.ef245657a772c3b6003f.png",
     "static/media/profile.jpg": "/static/media/profile.fbd1848ad10a04aa000a.jpg",
     "static/media/avatar.png": "/static/media/avatar.3d2bdd249dc4c75d6ad5.png",
-    "static/media/project1_placeholder.png": "/static/media/project1_placeholder.ac34f518c32ae1934285.png",
+    "static/media/NightSpot.png": "/static/media/NightSpot.95e7ad681b35e59de317.png",
     "static/media/roboto-all-500-normal.woff": "/static/media/roboto-all-500-normal.52cb737b682eb9661ee1.woff",
     "static/media/roboto-all-700-normal.woff": "/static/media/roboto-all-700-normal.ef6d1d09b20b877fee4e.woff",
     "static/media/roboto-all-400-normal.woff": "/static/media/roboto-all-400-normal.376ea5d93f71583052f6.woff",
     "static/media/roboto-all-300-normal.woff": "/static/media/roboto-all-300-normal.8fc5f5f22c9951113696.woff",
-    "static/media/CV_MarkEdisonRosario.pdf": "/static/media/CV_MarkEdisonRosario.5bee0e0a1f1d95b4a5d1.pdf",
+    "static/media/OrderForm.png": "/static/media/OrderForm.8f6a648d7fdbc5bd80fb.png",
+    "static/media/Resume - Mark Edison Rosario.pdf": "/static/media/Resume - Mark Edison Rosario.05e6cf530b656ed88877.pdf",
+    "static/media/SurveyForm.png": "/static/media/SurveyForm.22198c1a01479ee538f9.png",
+    "static/media/TodoApp.png": "/static/media/TodoApp.f955ae82d0ab5c5aa80a.png",
     "static/media/roboto-latin-500-normal.woff2": "/static/media/roboto-latin-500-normal.869888415d0b1a99ae5c.woff2",
     "static/media/roboto-latin-700-normal.woff2": "/static/media/roboto-latin-700-normal.0682ca7f74351d42bf73.woff2",
     "static/media/roboto-latin-300-normal.woff2": "/static/media/roboto-latin-300-normal.0109a2ace896a506a0aa.woff2",
@@ -39,11 +43,11 @@
     "static/media/roboto-greek-ext-300-normal.woff2": "/static/media/roboto-greek-ext-300-normal.04e05839d6a35e046c13.woff2",
     "static/media/roboto-greek-ext-700-normal.woff2": "/static/media/roboto-greek-ext-700-normal.9674bc0ae12c2551d9d1.woff2",
     "index.html": "/index.html",
-    "main.2ea734e8.css.map": "/static/css/main.2ea734e8.css.map",
-    "main.bbb8aa67.js.map": "/static/js/main.bbb8aa67.js.map"
+    "main.2259e22b.css.map": "/static/css/main.2259e22b.css.map",
+    "main.b61298b6.js.map": "/static/js/main.b61298b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ea734e8.css",
-    "static/js/main.bbb8aa67.js"
+    "static/css/main.2259e22b.css",
+    "static/js/main.b61298b6.js"
   ]
 }
