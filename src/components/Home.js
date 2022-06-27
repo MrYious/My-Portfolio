@@ -1,6 +1,6 @@
 import { Button, Grid, Typography } from "@mui/material";
 
-import CV from "../assets/CV_MarkEdisonRosario.pdf"
+import CV from "../assets/Resume - Mark Edison Rosario.pdf"
 import Navbar from './Navbar';
 import banner from "../assets/avatar.png"
 import { useTheme } from '@mui/material/styles';
@@ -50,7 +50,7 @@ const Home = ({ intro, small, navData }) => {
                     </Grid>
 
                     <Grid item textAlign={small ? "center" : "left"} >
-                        <a href={CV} download="MarkRosario_CV" style={{textDecoration: "none"}}>
+                        <a href={CV} download="Resume - Mark Edison Rosario" style={{textDecoration: "none"}}>
                             <Button variant={theme.palette.mode === "light" ? "contained" : "outlined" }>
                                 <Typography variant="h6" >
                                     Download CV
